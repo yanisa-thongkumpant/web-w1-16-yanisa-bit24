@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=, initial-scale=1.0">
     <title>Document</title>
 </head>
-<body> 
-    
+<body>
+
 <style>
         /* ตั้งค่าพื้นหลังและโทนสีโดยรวม (Cool Blue Theme) */
         body {
@@ -141,7 +141,7 @@
     </div>
 
     <div class="card">
-        <a href="while.php" class="nav-link">← ไปที่ While Loop</a>
+        <a href="index.php" class="nav-link">← ไปที่ For Loop</a>
         
         <form action="" method="GET">
             <label for="num">เลขแม่สูตรคูณ</label>
@@ -157,15 +157,15 @@
        echo '<div class="card result-card">';
        echo '<div class="result-title">สูตรคูณแม่ ' . htmlspecialchars($num) . '</div>';
 
-       for($i = 1; $i <= 12; $i++){
-           // แสดงผลแยกเป็นกล่องเล็กๆ สีฟ้าละมุนตา
+       // โค้ดที่แก้ไข: เปลี่ยนเป็น While Loop แสดงผลจาก 12 ลงไปถึง 1 ตามที่คุณเขียนไว้
+       $i = 12;
+       while ($i >= 1){ 
            echo '<div class="result-item">' . $num . ' x ' . $i . ' = ' . ($num * $i) . '</div>';
+           $i--; 
        } 
        echo '</div>';
      }
     ?>
-
- 
 
 </body>
 </html>
